@@ -1,0 +1,182 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title BackPack
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')
+  script(src='https://use.fontawesome.com/releases/v5.0.8/js/all.js')
+  link(href='./PurpleAdmin-Free-Admin-Template-master/assets/css/main.css' rel='stylesheet')
+  link(href='../assets/css/main.css' type="text/css" rel='stylesheet')
+// Navigation
+nav.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top
+  .container-fluid
+    a(navbar-brand='' href='#')
+      img(src='#')
+      | Backpack logo here
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-responsive')
+      span.navbar-toggler-icon
+    #navbarResponsive.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item.active
+          a.nav-link(href='#') Home
+        li.nav-item
+          a.nav-link(href='#') About
+        li.nav-item
+          a.nav-link(href='#') Services
+        li.nav-item
+          a.nav-link(href='#') Contact
+        li.nav-item
+          // Trigger the modal with a button
+          button.btn.btn-primary.btn-lg(type='button' data-toggle='modal' data-target='#myModal') Log In
+          // Modal
+          #myModal.modal.fade(role='dialog')
+            .modal-dialog.modal-lg
+              // Modal content
+              .modal-content
+                .modal-header
+                  button.close(type='button' data-dismiss='modal') &times;
+                  h4.modal-title Close
+                .modal-body
+                  form(action='auth' method='POST')
+                    input(type='text' name='emailAddress' placeholder='email' required='')
+                    input#password.form__input(placeholder='password' type='password' name='password' required='' minlength='8' aria-describedby='passwordHint' autocomplete='current-password')
+                    input(type='submit')
+                .modal-footer
+                  button.btn.btn-default(type='button' data-dismiss='modal') Close
+// - Image Slider
+#slides.carousel.slide(data-ride='carousel')
+  ul.carousel-indicators
+    li.active(data-target='#slides' data-slide-to='0')
+    li(data-target='#slides' data-slide-to='1')
+    li(data-target='#slides' data-slide-to='2')
+  .carousel-inner
+    .carousel-item.active
+      img(src='../assets/images/indexImages/stockPhoto1.jpg')
+      .carousel-caption
+        h1.display-2 Backpack
+        h3 We empower universities with the tools to help students thrive.
+        button.btn.btn-primary.btn-lg(type='button') Learn More
+    .carousel-item
+      img(src='../assets/images/indexImages/stockPhoto2.jpg')
+      .carousel-caption
+        h3
+          | Manage your course material and deliver it to students all in one easy
+          | to use platform
+    .carousel-item
+      img(src='../assets/images/indexImages/stockPhoto3.jpg')
+      .carousel-caption
+        h3
+          | Track your progression and manage your time with our friendly management
+          | tools
+| &quot;
+// - Welcome Section
+.container-fluid.padding
+  .row.welcome.text-center
+    .col-12
+      h1.display-4 Built for students, by students
+      hr
+      .col-12
+        p.lead
+          | Backpack has been built by students who know what a modern learning
+          | management system needs to
+          | deliver
+          | streamlined and user friendly tools that both students and teachers can
+          | benefit from.
+// - Three Column Section
+.container-fluid.padding
+  .row.text-center.padding
+    .col-xs-12.col-sm-6.col-md-4
+      i.fas.fa-code
+      h3 HTML5
+      p Built with the latest version of HTML 5
+    .col-xs-12.col-sm-6.col-md-4
+      i.fas.fa-bold
+      h3 BOOTSTRAP
+      p Built with the latest version of BOOTSTRAP, BOOTSTRAP 4
+    .col-sm-12.col-md-4
+      i.fab.fa-css3
+      h3 CSS
+      p Built with the latest version of CSS, CSS 3
+  hr.my-4
+figure
+  .fixed-wrap
+    #fixed
+// - Meet the team
+.container-fluid.padding
+  .row.welcome.text-center
+    .col-12
+      h1.display-4 Meet The Team
+    hr
+// - Cards
+.container-fluid.padding
+  .row.padding
+    .col-md-4
+      .card
+        img.card-img-top(src='../assets/images/indexImages/team1.png')
+        .card-body
+          h4.card-title John Doe
+          p.card-text Blah Blah BLah
+          a.btn.btn-outline-secondary(href='#') See Profile
+    .col-md-4
+      .card
+        img.card-img-top(src='../assets/images/indexImages/team2.png')
+        .card-body
+          h4.card-title Mary Joe
+          p.card-text Blah Blah BLah
+          a.btn.btn-outline-secondary(href='#') See Profile
+    .col-md-4
+      .card
+        img.card-img-top(src='../assets/images/indexImages/team3.png')
+        .card-body
+          h4.card-title John Page
+          p.card-text Blah Blah BLah
+          a.btn.btn-outline-secondary(href='#') See Profile
+// - Connect
+.container-fluid.padding
+  .row.text-center.padding
+    .col-12
+      h2 Connect
+    .col-12.social.padding
+      a(href='facebook.com')
+        i.fab.fa-facebook
+      a(href='twitter.com')
+        i.fab.fa-twitter
+      a(href='googleplus.com')
+        i.fab.fa-google-plus-g
+      a(href='instagram.com')
+        i.fab.fa-instagram
+      a(href='youtube.com')
+        i.fab.fa-youtube
+// - Footer
+footer
+  .container-fluid.padding
+    .row.text-center
+      .col-md-4
+        img(src='#')
+        | Backpack Logo Here
+        hr.hr-light
+        p 315-374-4362
+        p matthew.witter@sjcme.edu
+        p 113 Matchwood Lane
+        p Liverpool, NY, 13090
+      .col-md-4
+        hr.hr-light
+        h5 Our Hours
+        hr.hr-light
+        p Monday: 9am - 5pm
+        p Saturday: 10am - 4pm
+        p Sunday: Closed
+      .col-md-4
+        hr.hr-light
+        h5 Some other data maybe
+        hr.hr-light
+        p City State Zip Code
+        p City State Zip Code
+        p City State Zip Code
+        p City State Zip Code
+      .col-12
+        hr.hr-light-100
+        h5 &copy; BackPack.com
